@@ -1,0 +1,365 @@
+/* Directionary landing page — matches the app's dark theme:
+   gold #f9cb42 on near-black #060605, PublicSans-style system stack. */
+
+:root {
+  --gold: #f9cb42;
+  --bg: #060605;
+  --surface: #141310;
+  --surface-alt: #0d0c0a;
+  --text: #f5f2e9;
+  --muted: #b8b2a4;
+  --border: #2a2822;
+  --radius: 12px;
+  --max: 1080px;
+  --font: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  line-height: 1.6;
+}
+
+a { color: var(--gold); }
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--gold);
+  color: #000;
+  padding: 0.5rem 1rem;
+  z-index: 100;
+}
+
+.skip-link:focus { left: 0; }
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.wrap.narrow { max-width: 720px; }
+
+/* Header */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  background: rgba(6, 6, 5, 0.92);
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+
+.nav {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  margin-right: auto;
+}
+
+.brand-mark { color: var(--gold); }
+
+.nav-links {
+  display: flex;
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.nav-links a:hover { color: var(--text); }
+
+/* Buttons */
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.button-primary {
+  background: var(--gold);
+  color: #1a1500;
+}
+
+.button-small {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+.button-disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+.soon {
+  font-weight: 400;
+  font-size: 0.85em;
+}
+
+.fine-print {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Hero */
+
+.hero {
+  padding: 4rem 0 3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.eyebrow {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  line-height: 1.15;
+  margin: 0 0 1rem;
+}
+
+.lede { font-size: 1.15rem; color: var(--text); }
+
+.lede strong { color: var(--gold); }
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.75rem 0 0.75rem;
+}
+
+/* Phone illustration (placeholder for a real screenshot) */
+
+.hero-phone { display: flex; justify-content: center; }
+
+.phone {
+  width: min(280px, 100%);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  padding: 1.25rem 1.25rem 1.5rem;
+  box-shadow: 0 24px 64px rgba(249, 203, 66, 0.08);
+}
+
+.phone-notch {
+  width: 96px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--border);
+  margin: 0 auto 1.25rem;
+}
+
+.phone-title {
+  color: var(--gold);
+  font-weight: 700;
+  margin: 0 0 1rem;
+}
+
+.phone-steps {
+  margin: 0 0 1.25rem;
+  padding-left: 1.25rem;
+  color: var(--muted);
+  display: grid;
+  gap: 0.5rem;
+}
+
+.phone-cta {
+  display: block;
+  text-align: center;
+  background: var(--gold);
+  color: #1a1500;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 0.6rem;
+}
+
+/* Sections */
+
+.section { padding: 4rem 0; }
+
+.section-alt {
+  background: var(--surface-alt);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.section h2 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  margin: 0 0 0.75rem;
+}
+
+.section-lede {
+  color: var(--muted);
+  max-width: 640px;
+  margin: 0 0 2rem;
+}
+
+/* Features */
+
+.feature-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.card h3 {
+  margin: 0 0 0.5rem;
+  color: var(--gold);
+  font-size: 1.1rem;
+}
+
+.card p { margin: 0; color: var(--muted); }
+
+/* How it works */
+
+.steps {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  counter-reset: step;
+}
+
+.steps li {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--gold);
+  color: #1a1500;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.steps h3 { margin: 0 0 0.5rem; }
+.steps p { margin: 0; color: var(--muted); }
+
+/* Screens */
+
+.screen-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.screen-placeholder {
+  aspect-ratio: 9 / 16;
+  max-height: 480px;
+  border: 1px dashed var(--border);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--surface);
+}
+
+.screen-label {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.screen-note { color: var(--muted); font-size: 0.9rem; }
+
+/* Footer */
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 2.5rem 0;
+}
+
+.footer-inner {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.footer-inner p { margin: 0; }
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsive */
+
+@media (max-width: 860px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .feature-grid, .steps, .screen-grid { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+  .screen-placeholder { aspect-ratio: 16 / 9; max-height: none; }
+}
