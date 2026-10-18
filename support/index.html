@@ -6,6 +6,10 @@
   <title>Support — Directionary</title>
   <meta name="description" content="Contact the Directionary team, report accessibility problems, and find information about account deletion." />
   <link rel="canonical" href="https://directionary.app/support/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Support — Directionary" />
+  <meta property="og:description" content="Contact the Directionary team, report accessibility problems, and find information about account deletion." />
+  <meta property="og:url" content="https://directionary.app/support/" />
   <link rel="icon" type="image/png" href="/assets/favicon.png" />
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
   <script src="/assets/theme.js"></script>
@@ -22,14 +26,16 @@
           <span>Directionary</span>
         </a>
         <ul class="nav-links">
-          <li><a href="/#about">About</a></li>
           <li><a href="/#how-it-works">How it works</a></li>
-          <li><a href="/#philosophy">Our philosophy</a></li>
+          <li><a href="/#framework">Framework</a></li>
+          <li><a href="/#philosophy">Philosophy</a></li>
+          <li><a href="/#about">About</a></li>
         </ul>
-        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">
-          <span class="swatch" aria-hidden="true"></span>
-          Dark mode
-        </button>
+        <fieldset class="theme-switch">
+          <legend class="visually-hidden">Colour theme</legend>
+          <label><input type="radio" name="theme" value="light" checked /><span>Light</span></label>
+          <label><input type="radio" name="theme" value="dark" /><span>Dark</span></label>
+        </fieldset>
       </nav>
     </div>
   </header>
@@ -37,35 +43,51 @@
   <main id="main">
     <div class="wrap doc">
       <div class="doc-head">
-        <p class="eyebrow">Help and contact</p>
+        
         <h1>Support</h1>
+        <p class="lede">Questions, feedback and accessibility reports are welcome.</p>
       </div>
-      <div class="prose">
-        <h2>Contact</h2>
-        <p>For questions, feedback or assistance, email <a href="mailto:directionary@guidedogs.org.sg">directionary@guidedogs.org.sg</a>.</p>
-
-        <h2>Accessibility feedback</h2>
-        <p>Directionary is designed for screen reader use, and we want to hear about anything that gets in the way. If you find an accessibility barrier or a problem using Directionary, please email us at <a href="mailto:directionary@guidedogs.org.sg">directionary@guidedogs.org.sg</a>. Tell us what you were trying to do, the device and screen reader you use, and what happened.</p>
-
-        <h2 id="account-deletion">Account deletion</h2>
-        <p class="draft-banner"><strong>Launch requirement.</strong> The account deletion process has not been confirmed. Google Play and the Apple App Store require an accurate, actionable way to request deletion, so this section must be completed before the app is released.</p>
-        <p class="draft"><strong>To be confirmed:</strong> how to request deletion of your account and data, what is deleted, and what, if anything, is kept.</p>
+      <div class="grid">
+        <div class="toc">
+          <nav aria-label="On this page">
+            <h2>On this page</h2>
+            <ol>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#accessibility-feedback">Accessibility feedback</a></li>
+            <li><a href="#account-deletion">Account deletion</a></li>
+            </ol>
+          </nav>
+        </div>
+        <div class="prose-col">
+          
+          <div class="prose">
+          <section id="contact" aria-labelledby="contact-h"><h2 id="contact-h">Contact</h2>
+<p>For questions, feedback or assistance, email</p><p class="contact-line"><a href="mailto:directionary@guidedogs.org.sg">directionary@guidedogs.org.sg</a></p>
+          </section>
+          <section id="accessibility-feedback" aria-labelledby="accessibility-feedback-h"><h2 id="accessibility-feedback-h">Accessibility feedback</h2>
+<p>Directionary is designed for screen reader use, and we want to hear about anything that gets in the way. If you find an accessibility barrier or a problem using Directionary, please email <a href="mailto:directionary@guidedogs.org.sg">directionary@guidedogs.org.sg</a>. Tell us what you were trying to do, the device and screen reader you use, and what happened.</p>
+          </section>
+          <section id="account-deletion" aria-labelledby="account-deletion-h"><h2 id="account-deletion-h">Account deletion</h2>
+<div class="draft-notice"><span class="tag">Launch requirement</span><p>The account deletion process has not been confirmed. Google Play and the Apple App Store require an accurate, actionable way to request deletion, so this section must be completed before the app is released.</p></div>
+            <div class="pending"><span class="tag">To be confirmed</span><p>How to request deletion of your account and data, what is deleted, and what, if anything, is kept.</p></div>
+          </section>
+          </div>
+        </div>
       </div>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <div class="footer-grid">
-        <div>
+      <div class="grid">
+        <div class="f-about">
           <p class="footer-brand">
             <img class="brand-mark" src="/assets/mark-small.png" alt="" width="80" height="55" />
             Directionary
           </p>
-          <p>A community-driven wayfinding app to help people with visual impairments discover, learn and share routes.</p>
-          <p>Developed in collaboration with Guide Dogs Singapore.</p>
+          <p class="muted">A community-driven route-learning app for people with visual impairments. Developed in collaboration with Guide Dogs Singapore.</p>
         </div>
-        <nav aria-label="Legal and support">
+        <nav class="f-links" aria-label="Legal and support">
           <h2>Information</h2>
           <ul class="footer-links">
             <li><a href="/privacy/">Privacy Policy</a></li>
@@ -74,7 +96,7 @@
             <li><a href="/support/#account-deletion">Account deletion</a></li>
           </ul>
         </nav>
-        <div>
+        <div class="f-contact">
           <h2>Contact</h2>
           <p><a href="mailto:directionary@guidedogs.org.sg">directionary@guidedogs.org.sg</a></p>
         </div>

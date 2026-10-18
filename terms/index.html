@@ -6,6 +6,10 @@
   <title>Terms of Use — Directionary</title>
   <meta name="description" content="Draft terms of use for Directionary, a supplementary route-learning and wayfinding tool." />
   <link rel="canonical" href="https://directionary.app/terms/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Terms of Use — Directionary" />
+  <meta property="og:description" content="Draft terms of use for Directionary, a supplementary route-learning and wayfinding tool." />
+  <meta property="og:url" content="https://directionary.app/terms/" />
   <link rel="icon" type="image/png" href="/assets/favicon.png" />
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
   <script src="/assets/theme.js"></script>
@@ -22,14 +26,16 @@
           <span>Directionary</span>
         </a>
         <ul class="nav-links">
-          <li><a href="/#about">About</a></li>
           <li><a href="/#how-it-works">How it works</a></li>
-          <li><a href="/#philosophy">Our philosophy</a></li>
+          <li><a href="/#framework">Framework</a></li>
+          <li><a href="/#philosophy">Philosophy</a></li>
+          <li><a href="/#about">About</a></li>
         </ul>
-        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">
-          <span class="swatch" aria-hidden="true"></span>
-          Dark mode
-        </button>
+        <fieldset class="theme-switch">
+          <legend class="visually-hidden">Colour theme</legend>
+          <label><input type="radio" name="theme" value="light" checked /><span>Light</span></label>
+          <label><input type="radio" name="theme" value="dark" /><span>Dark</span></label>
+        </fieldset>
       </nav>
     </div>
   </header>
@@ -37,68 +43,90 @@
   <main id="main">
     <div class="wrap doc">
       <div class="doc-head">
-        <p class="eyebrow">Draft — requires legal review</p>
+        <p class="eyebrow"><span class="tag">Draft</span></p>
         <h1>Terms of Use</h1>
+        <p class="lede">Responsible use of Directionary, a supplementary route-learning tool.</p>
       </div>
-      <div class="prose">
-        <p class="draft-banner"><strong>Draft.</strong> These terms have not been reviewed by a legal professional and are not yet in force. Provisions marked “Legal review” must be reviewed before release. Questions: <a href="mailto:directionary@guidedogs.org.sg">directionary@guidedogs.org.sg</a>.</p>
-
-        <h2>Purpose of Directionary</h2>
-        <p>Directionary is a mobile app that helps people with visual impairments discover, learn and share routes through directions, clues and landmarks contributed by the community.</p>
-
-        <h2>A supplementary tool</h2>
-        <p>Directionary is a supplementary route-learning and wayfinding tool. It does not replace:</p>
-        <ul>
-          <li>orientation and mobility training;</li>
-          <li>white canes, guide dogs or other mobility aids;</li>
-          <li>awareness of your surroundings;</li>
-          <li>your own judgement; or</li>
-          <li>assistance from other people when you need it.</li>
-        </ul>
-        <p>Directionary is not a real-time navigation system and does not detect obstacles.</p>
-
-        <h2>Community-contributed routes</h2>
-        <p>Routes are contributed by users. They may be incomplete or become outdated, and may not reflect current conditions such as construction, weather or changes to a building or street. Directionary does not guarantee that any route is accurate or safe.</p>
-
-        <h2>Your responsibilities</h2>
-        <p>Use routes as one source of information. Stay aware of your surroundings, use the mobility skills and aids that suit you, and take appropriate precautions.</p>
-
-        <h2>Content you contribute</h2>
-        <p class="draft"><strong>Legal review:</strong> licence granted for user-generated routes, your responsibility for what you share, and how content can be reported or removed.</p>
-
-        <h2>Acceptable use</h2>
-        <p class="draft"><strong>Legal review:</strong> rules against sharing misleading, harmful or unlawful content, and consequences of breaking them.</p>
-
-        <h2>Intellectual property</h2>
-        <p class="draft"><strong>Legal review:</strong> ownership of the app, name and logo, and of contributed content.</p>
-
-        <h2>Availability of the service</h2>
-        <p class="draft"><strong>Legal review:</strong> statement on service availability, changes and discontinuation.</p>
-
-        <h2>Liability</h2>
-        <p class="draft"><strong>Legal review:</strong> limits on liability. Wording must be prepared by a legal professional and must not overstate protections.</p>
-
-        <h2>Who operates Directionary</h2>
-        <p class="draft"><strong>To be confirmed:</strong> the legal operator. Directionary is developed in collaboration with Guide Dogs Singapore; that collaboration does not mean Guide Dogs Singapore guarantees routes or user safety.</p>
-
-        <h2>Contact</h2>
-        <p><a href="mailto:directionary@guidedogs.org.sg">directionary@guidedogs.org.sg</a></p>
+      <div class="grid">
+        <div class="toc">
+          <nav aria-label="On this page">
+            <h2>On this page</h2>
+            <ol>
+            <li><a href="#purpose">Purpose of Directionary</a></li>
+            <li><a href="#supplementary">A supplementary tool</a></li>
+            <li><a href="#community-routes">Community-contributed routes</a></li>
+            <li><a href="#responsibilities">Your responsibilities</a></li>
+            <li><a href="#content">Content you contribute</a></li>
+            <li><a href="#acceptable-use">Acceptable use</a></li>
+            <li><a href="#ip">Intellectual property</a></li>
+            <li><a href="#availability">Availability of the service</a></li>
+            <li><a href="#liability">Liability</a></li>
+            <li><a href="#operator">Who operates Directionary</a></li>
+            <li><a href="#contact">Contact</a></li>
+            </ol>
+          </nav>
+        </div>
+        <div class="prose-col">
+          <div class="draft-notice"><span class="tag">Draft, requires legal review</span><p>These terms have not been reviewed by a legal professional and are not in force. Provisions marked “Legal review” need professional review before release. Questions: <a href="mailto:directionary@guidedogs.org.sg">directionary@guidedogs.org.sg</a>.</p></div>
+          <div class="prose">
+          <section id="purpose" aria-labelledby="purpose-h"><h2 id="purpose-h">Purpose of Directionary</h2>
+<p>Directionary is a mobile app that helps people with visual impairments create, share and learn routes through directions, clues and landmarks contributed by the community.</p>
+          </section>
+          <section id="supplementary" aria-labelledby="supplementary-h"><h2 id="supplementary-h">A supplementary tool</h2>
+<p>Directionary is a supplementary route-learning and wayfinding tool. It does not replace:</p>
+            <ul>
+              <li>orientation and mobility training;</li>
+              <li>white canes, guide dogs or other mobility aids;</li>
+              <li>awareness of your surroundings;</li>
+              <li>your own judgement; or</li>
+              <li>assistance from other people when you need it.</li>
+            </ul>
+            <p>Directionary is not a real-time navigation system and does not detect obstacles.</p>
+          </section>
+          <section id="community-routes" aria-labelledby="community-routes-h"><h2 id="community-routes-h">Community-contributed routes</h2>
+<p>Routes are contributed by users. They may be incomplete or become outdated, and may not reflect current conditions such as construction, weather or changes to a building or street. Directionary does not guarantee that any route is accurate or safe.</p>
+          </section>
+          <section id="responsibilities" aria-labelledby="responsibilities-h"><h2 id="responsibilities-h">Your responsibilities</h2>
+<p>Use routes as one source of information. Stay aware of your surroundings, use the mobility skills and aids that suit you, and take appropriate precautions.</p>
+          </section>
+          <section id="content" aria-labelledby="content-h"><h2 id="content-h">Content you contribute</h2>
+<div class="pending"><span class="tag">Legal review</span><p>Licence granted for user-generated routes, your responsibility for what you share, and how content can be reported or removed.</p></div>
+          </section>
+          <section id="acceptable-use" aria-labelledby="acceptable-use-h"><h2 id="acceptable-use-h">Acceptable use</h2>
+<div class="pending"><span class="tag">Legal review</span><p>Rules against sharing misleading, harmful or unlawful content, and the consequences of breaking them.</p></div>
+          </section>
+          <section id="ip" aria-labelledby="ip-h"><h2 id="ip-h">Intellectual property</h2>
+<div class="pending"><span class="tag">Legal review</span><p>Ownership of the app, name and logo, and of contributed content.</p></div>
+          </section>
+          <section id="availability" aria-labelledby="availability-h"><h2 id="availability-h">Availability of the service</h2>
+<div class="pending"><span class="tag">Legal review</span><p>Statement on service availability, changes and discontinuation.</p></div>
+          </section>
+          <section id="liability" aria-labelledby="liability-h"><h2 id="liability-h">Liability</h2>
+<div class="pending"><span class="tag">Legal review</span><p>Limits on liability. Wording must be prepared by a legal professional and must not overstate protections.</p></div>
+          </section>
+          <section id="operator" aria-labelledby="operator-h"><h2 id="operator-h">Who operates Directionary</h2>
+<div class="pending"><span class="tag">To be confirmed</span><p>The legal operator. Directionary is developed in collaboration with Guide Dogs Singapore; that collaboration does not mean Guide Dogs Singapore guarantees routes or user safety.</p></div>
+          </section>
+          <section id="contact" aria-labelledby="contact-h"><h2 id="contact-h">Contact</h2>
+<p><a href="mailto:directionary@guidedogs.org.sg">directionary@guidedogs.org.sg</a></p>
+          </section>
+          </div>
+        </div>
       </div>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <div class="footer-grid">
-        <div>
+      <div class="grid">
+        <div class="f-about">
           <p class="footer-brand">
             <img class="brand-mark" src="/assets/mark-small.png" alt="" width="80" height="55" />
             Directionary
           </p>
-          <p>A community-driven wayfinding app to help people with visual impairments discover, learn and share routes.</p>
-          <p>Developed in collaboration with Guide Dogs Singapore.</p>
+          <p class="muted">A community-driven route-learning app for people with visual impairments. Developed in collaboration with Guide Dogs Singapore.</p>
         </div>
-        <nav aria-label="Legal and support">
+        <nav class="f-links" aria-label="Legal and support">
           <h2>Information</h2>
           <ul class="footer-links">
             <li><a href="/privacy/">Privacy Policy</a></li>
@@ -107,7 +135,7 @@
             <li><a href="/support/#account-deletion">Account deletion</a></li>
           </ul>
         </nav>
-        <div>
+        <div class="f-contact">
           <h2>Contact</h2>
           <p><a href="mailto:directionary@guidedogs.org.sg">directionary@guidedogs.org.sg</a></p>
         </div>

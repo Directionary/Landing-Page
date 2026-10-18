@@ -18,7 +18,7 @@ theme toggle. There is no build step and there are no dependencies.
 | `terms/index.html` | Terms of Use (draft) |
 | `support/index.html` | Support, accessibility feedback, account deletion |
 | `styles.css` | Shared styles and design tokens (light and dark) |
-| `assets/theme.js` | Theme toggle; stores the choice in `localStorage` |
+| `assets/theme.js` | Light/Dark segmented control; stores the choice in `localStorage` |
 | `assets/` | Logo, header mark and favicons |
 | `CNAME` | Custom domain (`directionary.app`). Do not edit. |
 

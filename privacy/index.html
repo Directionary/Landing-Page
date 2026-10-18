@@ -6,6 +6,10 @@
   <title>Privacy Policy — Directionary</title>
   <meta name="description" content="Draft privacy policy for the Directionary app. Details are being confirmed before public release." />
   <link rel="canonical" href="https://directionary.app/privacy/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Privacy Policy — Directionary" />
+  <meta property="og:description" content="Draft privacy policy for the Directionary app. Details are being confirmed before public release." />
+  <meta property="og:url" content="https://directionary.app/privacy/" />
   <link rel="icon" type="image/png" href="/assets/favicon.png" />
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
   <script src="/assets/theme.js"></script>
@@ -22,14 +26,16 @@
           <span>Directionary</span>
         </a>
         <ul class="nav-links">
-          <li><a href="/#about">About</a></li>
           <li><a href="/#how-it-works">How it works</a></li>
-          <li><a href="/#philosophy">Our philosophy</a></li>
+          <li><a href="/#framework">Framework</a></li>
+          <li><a href="/#philosophy">Philosophy</a></li>
+          <li><a href="/#about">About</a></li>
         </ul>
-        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">
-          <span class="swatch" aria-hidden="true"></span>
-          Dark mode
-        </button>
+        <fieldset class="theme-switch">
+          <legend class="visually-hidden">Colour theme</legend>
+          <label><input type="radio" name="theme" value="light" checked /><span>Light</span></label>
+          <label><input type="radio" name="theme" value="dark" /><span>Dark</span></label>
+        </fieldset>
       </nav>
     </div>
   </header>
@@ -37,57 +43,78 @@
   <main id="main">
     <div class="wrap doc">
       <div class="doc-head">
-        <p class="eyebrow">Draft — not yet in force</p>
+        <p class="eyebrow"><span class="tag">Draft</span></p>
         <h1>Privacy Policy</h1>
+        <p class="lede">How Directionary handles personal information. This page is still being prepared.</p>
       </div>
-      <div class="prose">
-        <p class="draft-banner"><strong>Draft.</strong> This page is a structure for the Privacy Policy and is not yet a statement of how Directionary handles data. Each section marked “To be confirmed” must be completed and reviewed before the app is released. Questions: <a href="mailto:directionary@guidedogs.org.sg">directionary@guidedogs.org.sg</a>.</p>
-
-        <h2>Who is responsible</h2>
-        <p class="draft"><strong>To be confirmed:</strong> the legal operator of Directionary and the organisation responsible for personal data (data controller). Directionary is developed in collaboration with Guide Dogs Singapore; this page does not state who the legal operator is.</p>
-
-        <h2>Information collected when you register</h2>
-        <p class="draft"><strong>To be confirmed:</strong> what is collected at registration, such as an email address and username, and why.</p>
-
-        <h2>Routes and contributions</h2>
-        <p class="draft"><strong>To be confirmed:</strong> how routes, directions, clues and landmarks that people contribute are stored, shown to others and attributed.</p>
-
-        <h2>Location information</h2>
-        <p class="draft"><strong>To be confirmed:</strong> whether the app collects location data and, if so, when, why and how it is used.</p>
-
-        <h2>Feedback and bug reports</h2>
-        <p class="draft"><strong>To be confirmed:</strong> what information is included when you send feedback or a bug report.</p>
-
-        <h2>Authentication and third-party providers</h2>
-        <p class="draft"><strong>To be confirmed:</strong> the sign-in service and any other third-party providers that process data, and what each receives.</p>
-
-        <h2>Storage and retention</h2>
-        <p class="draft"><strong>To be confirmed:</strong> where data is stored and how long it is kept.</p>
-
-        <h2>Your rights</h2>
-        <p class="draft"><strong>To be confirmed:</strong> how you can access, correct or withdraw consent for your personal data, reviewed against Singapore’s Personal Data Protection Act (PDPA).</p>
-
-        <h2>Account deletion</h2>
-        <p>Information about deleting your account will be on the <a href="/support/#account-deletion">Support page</a>.</p>
-
-        <h2>Contact</h2>
-        <p>For privacy questions, contact <a href="mailto:directionary@guidedogs.org.sg">directionary@guidedogs.org.sg</a>.</p>
+      <div class="grid">
+        <div class="toc">
+          <nav aria-label="On this page">
+            <h2>On this page</h2>
+            <ol>
+            <li><a href="#responsible">Who is responsible</a></li>
+            <li><a href="#registration">Information collected at registration</a></li>
+            <li><a href="#routes">Routes and contributions</a></li>
+            <li><a href="#location">Location information</a></li>
+            <li><a href="#feedback">Feedback and bug reports</a></li>
+            <li><a href="#providers">Authentication and third-party providers</a></li>
+            <li><a href="#retention">Storage and retention</a></li>
+            <li><a href="#rights">Your rights</a></li>
+            <li><a href="#deletion">Account deletion</a></li>
+            <li><a href="#contact">Contact</a></li>
+            </ol>
+          </nav>
+        </div>
+        <div class="prose-col">
+          <div class="draft-notice"><span class="tag">Draft, not in force</span><p>This page sets out the structure of the Privacy Policy. It does not yet describe how Directionary handles data, and nothing here should be relied on. Each section marked “To be confirmed” needs confirmed information and review before the app is released. Questions: <a href="mailto:directionary@guidedogs.org.sg">directionary@guidedogs.org.sg</a>.</p></div>
+          <div class="prose">
+          <section id="responsible" aria-labelledby="responsible-h"><h2 id="responsible-h">Who is responsible</h2>
+<div class="pending"><span class="tag">To be confirmed</span><p>The legal operator of Directionary and the organisation responsible for personal data. Directionary is developed in collaboration with Guide Dogs Singapore; this page does not state who the legal operator is.</p></div>
+          </section>
+          <section id="registration" aria-labelledby="registration-h"><h2 id="registration-h">Information collected at registration</h2>
+<div class="pending"><span class="tag">To be confirmed</span><p>What is collected when you register, such as an email address and username, and why.</p></div>
+          </section>
+          <section id="routes" aria-labelledby="routes-h"><h2 id="routes-h">Routes and contributions</h2>
+<div class="pending"><span class="tag">To be confirmed</span><p>How routes, directions, clues and landmarks that people contribute are stored, shown to others and attributed.</p></div>
+          </section>
+          <section id="location" aria-labelledby="location-h"><h2 id="location-h">Location information</h2>
+<div class="pending"><span class="tag">To be confirmed</span><p>Whether the app collects location data and, if so, when, why and how it is used.</p></div>
+          </section>
+          <section id="feedback" aria-labelledby="feedback-h"><h2 id="feedback-h">Feedback and bug reports</h2>
+<div class="pending"><span class="tag">To be confirmed</span><p>What information is included when you send feedback or a bug report.</p></div>
+          </section>
+          <section id="providers" aria-labelledby="providers-h"><h2 id="providers-h">Authentication and third-party providers</h2>
+<div class="pending"><span class="tag">To be confirmed</span><p>The sign-in service and any other providers that process data, and what each receives.</p></div>
+          </section>
+          <section id="retention" aria-labelledby="retention-h"><h2 id="retention-h">Storage and retention</h2>
+<div class="pending"><span class="tag">To be confirmed</span><p>Where data is stored and how long it is kept.</p></div>
+          </section>
+          <section id="rights" aria-labelledby="rights-h"><h2 id="rights-h">Your rights</h2>
+<div class="pending"><span class="tag">To be confirmed</span><p>How you can access, correct or withdraw consent for your personal data, reviewed against Singapore’s Personal Data Protection Act (PDPA).</p></div>
+          </section>
+          <section id="deletion" aria-labelledby="deletion-h"><h2 id="deletion-h">Account deletion</h2>
+<p>Information about deleting your account will be on the <a href="/support/#account-deletion">Support page</a>.</p>
+          </section>
+          <section id="contact" aria-labelledby="contact-h"><h2 id="contact-h">Contact</h2>
+<p>For privacy questions, contact <a href="mailto:directionary@guidedogs.org.sg">directionary@guidedogs.org.sg</a>.</p>
+          </section>
+          </div>
+        </div>
       </div>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <div class="footer-grid">
-        <div>
+      <div class="grid">
+        <div class="f-about">
           <p class="footer-brand">
             <img class="brand-mark" src="/assets/mark-small.png" alt="" width="80" height="55" />
             Directionary
           </p>
-          <p>A community-driven wayfinding app to help people with visual impairments discover, learn and share routes.</p>
-          <p>Developed in collaboration with Guide Dogs Singapore.</p>
+          <p class="muted">A community-driven route-learning app for people with visual impairments. Developed in collaboration with Guide Dogs Singapore.</p>
         </div>
-        <nav aria-label="Legal and support">
+        <nav class="f-links" aria-label="Legal and support">
           <h2>Information</h2>
           <ul class="footer-links">
             <li><a href="/privacy/">Privacy Policy</a></li>
@@ -96,7 +123,7 @@
             <li><a href="/support/#account-deletion">Account deletion</a></li>
           </ul>
         </nav>
-        <div>
+        <div class="f-contact">
           <h2>Contact</h2>
           <p><a href="mailto:directionary@guidedogs.org.sg">directionary@guidedogs.org.sg</a></p>
         </div>

@@ -1,5 +1,6 @@
 /* Theme switching. Loaded synchronously in <head> so the stored theme is
-   applied before first paint. Light is the default. */
+   applied before first paint. Light is the default. The control is a pair of
+   native radio buttons, so arrow keys and screen reader semantics come free. */
 (function () {
   var KEY = "directionary-theme";
   var root = document.documentElement;
@@ -16,20 +17,16 @@
   apply(stored() === "dark" ? "dark" : "light");
 
   document.addEventListener("DOMContentLoaded", function () {
-    var button = document.getElementById("theme-toggle");
-    if (!button) return;
+    var radios = document.querySelectorAll('input[name="theme"]');
+    var current = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
 
-    function sync() {
-      var dark = root.getAttribute("data-theme") === "dark";
-      button.setAttribute("aria-pressed", dark ? "true" : "false");
-    }
-    sync();
-
-    button.addEventListener("click", function () {
-      var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
-      apply(next);
-      try { localStorage.setItem(KEY, next); } catch (e) {}
-      sync();
+    Array.prototype.forEach.call(radios, function (radio) {
+      radio.checked = radio.value === current;
+      radio.addEventListener("change", function () {
+        if (!radio.checked) return;
+        apply(radio.value);
+        try { localStorage.setItem(KEY, radio.value); } catch (e) {}
+      });
     });
   });
 })();
