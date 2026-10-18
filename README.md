@@ -49,4 +49,8 @@ GitHub Pages serves this repo directly (legacy build, `main` / root). Every push
   "Legal review". They need the legal operator, actual data practices, Singapore PDPA
   review and app store requirements before release.
 - Account deletion: the process on `/support/#account-deletion` is not yet confirmed.
+- About page acknowledgements: names, roles and affiliations are provisional. Confirm each
+  with the person, and obtain permission to publish, before launch. To link a name to
+  LinkedIn later, wrap it as shown in the comment above the `.people` list in `about/index.html`
+  (only when a real URL exists).
 - Contact: directionary@guidedogs.org.sg
