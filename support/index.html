@@ -12,6 +12,7 @@
   <meta property="og:url" content="https://directionary.app/support/" />
   <link rel="icon" type="image/png" href="/assets/favicon.png" />
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
   <script src="/assets/theme.js"></script>
   <link rel="stylesheet" href="/styles.css" />
 </head>
@@ -24,43 +25,29 @@
         <img class="brand-mark" src="/assets/mark-small.png" alt="" width="80" height="55" />
         <span>Directionary</span>
       </a>
-      <nav aria-label="Primary" class="site-nav">
+      <nav class="site-nav" aria-label="Primary">
         <ul class="nav-links">
-          <li><a href="/#why">Why it exists</a></li>
-          <li><a href="/#framework">Framework</a></li>
-          <li><a href="/#philosophy">Philosophy</a></li>
-          <li><a href="/#about">About</a></li>
+          <li><a href="/features/">Features</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/support/" aria-current="page">Support</a></li>
         </ul>
       </nav>
-      <label class="switch">
-        <input type="checkbox" role="switch" id="theme-switch" />
-        <span class="track" aria-hidden="true"><span class="thumb"></span></span>
-        <span>Dark mode</span>
-      </label>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">
+        <span class="icon sun" aria-hidden="true">light_mode</span>
+        <span class="icon moon" aria-hidden="true">dark_mode</span>
+        <span class="visually-hidden">Dark mode</span>
+      </button>
     </div>
   </header>
 
   <main id="main">
-    <div class="wrap">
-      <div class="doc-hero">
-        <p class="kicker">Help and contact</p>
-        <h1>Support</h1>
-        <p class="lede">Questions, feedback and accessibility reports are welcome.</p>
-      </div>
-      <div class="doc-grid">
-        <div class="toc">
-          <nav aria-label="On this page">
-            <h2>On this page</h2>
-            <ol>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#accessibility-feedback">Accessibility feedback</a></li>
-            <li><a href="#account-deletion">Account deletion</a></li>
-            </ol>
-          </nav>
-        </div>
-        <div>
-          
-          <div class="doc-body">
+    <div class="wrap page-head">
+      <h1>Support</h1>
+      <p class="lede">Questions, feedback and accessibility reports are welcome.</p>
+    </div>
+    <div class="wrap doc">
+      
+      <div class="prose">
           <section id="contact" aria-labelledby="contact-h"><h2 id="contact-h">Contact</h2>
 <p>For questions, feedback or assistance, email</p><p class="contact-line"><a href="mailto:directionary@guidedogs.org.sg">directionary@guidedogs.org.sg</a></p>
           </section>
@@ -68,11 +55,9 @@
 <p>Directionary is designed for screen reader use, and we want to hear about anything that gets in the way. If you find an accessibility barrier or a problem using Directionary, please email <a href="mailto:directionary@guidedogs.org.sg">directionary@guidedogs.org.sg</a>. Tell us what you were trying to do, the device and screen reader you use, and what happened.</p>
           </section>
           <section id="account-deletion" aria-labelledby="account-deletion-h"><h2 id="account-deletion-h">Account deletion</h2>
-<div class="notice"><span class="tag">Launch requirement</span><p>The account deletion process has not been confirmed. Google Play and the Apple App Store require an accurate, actionable way to request deletion, so this section must be completed before the app is released.</p></div>
+<div class="notice doc-notice"><span class="icon" aria-hidden="true">edit_note</span><div><h3>Launch requirement</h3><p>The account deletion process has not been confirmed. Google Play and the Apple App Store require an accurate, actionable way to request deletion, so this section must be completed before the app is released.</p></div></div>
             <div class="pending"><span class="tag">To be confirmed</span><p>How to request deletion of your account and data, what is deleted, and what, if anything, is kept.</p></div>
           </section>
-          </div>
-        </div>
       </div>
     </div>
   </main>
@@ -86,12 +71,19 @@
         </p>
         <p class="muted">A community-driven route-learning and wayfinding app for people with visual impairments. Developed in collaboration with Guide Dogs Singapore.</p>
       </div>
-      <nav aria-label="Legal and support">
-        <h2>Information</h2>
+      <nav aria-label="Site">
+        <h2>Directionary</h2>
+        <ul class="flinks">
+          <li><a href="/features/">Features</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/support/">Support</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Legal">
+        <h2>Legal</h2>
         <ul class="flinks">
           <li><a href="/privacy/">Privacy Policy</a></li>
           <li><a href="/terms/">Terms of Use</a></li>
-          <li><a href="/support/">Support</a></li>
           <li><a href="/support/#account-deletion">Account deletion</a></li>
         </ul>
       </nav>

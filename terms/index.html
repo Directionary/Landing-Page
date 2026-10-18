@@ -12,6 +12,7 @@
   <meta property="og:url" content="https://directionary.app/terms/" />
   <link rel="icon" type="image/png" href="/assets/favicon.png" />
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
   <script src="/assets/theme.js"></script>
   <link rel="stylesheet" href="/styles.css" />
 </head>
@@ -24,51 +25,29 @@
         <img class="brand-mark" src="/assets/mark-small.png" alt="" width="80" height="55" />
         <span>Directionary</span>
       </a>
-      <nav aria-label="Primary" class="site-nav">
+      <nav class="site-nav" aria-label="Primary">
         <ul class="nav-links">
-          <li><a href="/#why">Why it exists</a></li>
-          <li><a href="/#framework">Framework</a></li>
-          <li><a href="/#philosophy">Philosophy</a></li>
-          <li><a href="/#about">About</a></li>
+          <li><a href="/features/">Features</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/support/">Support</a></li>
         </ul>
       </nav>
-      <label class="switch">
-        <input type="checkbox" role="switch" id="theme-switch" />
-        <span class="track" aria-hidden="true"><span class="thumb"></span></span>
-        <span>Dark mode</span>
-      </label>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">
+        <span class="icon sun" aria-hidden="true">light_mode</span>
+        <span class="icon moon" aria-hidden="true">dark_mode</span>
+        <span class="visually-hidden">Dark mode</span>
+      </button>
     </div>
   </header>
 
   <main id="main">
-    <div class="wrap">
-      <div class="doc-hero">
-        <p class="kicker"><span class="tag">Draft</span></p>
-        <h1>Terms of Use</h1>
-        <p class="lede">Responsible use of Directionary, a supplementary route-learning tool.</p>
-      </div>
-      <div class="doc-grid">
-        <div class="toc">
-          <nav aria-label="On this page">
-            <h2>On this page</h2>
-            <ol>
-            <li><a href="#purpose">Purpose of Directionary</a></li>
-            <li><a href="#supplementary">A supplementary tool</a></li>
-            <li><a href="#community-routes">Community-contributed routes</a></li>
-            <li><a href="#responsibilities">Your responsibilities</a></li>
-            <li><a href="#content">Content you contribute</a></li>
-            <li><a href="#acceptable-use">Acceptable use</a></li>
-            <li><a href="#ip">Intellectual property</a></li>
-            <li><a href="#availability">Availability of the service</a></li>
-            <li><a href="#liability">Liability</a></li>
-            <li><a href="#operator">Who operates Directionary</a></li>
-            <li><a href="#contact">Contact</a></li>
-            </ol>
-          </nav>
-        </div>
-        <div>
-          <div class="notice"><span class="tag">Draft, requires legal review</span><p>These terms have not been reviewed by a legal professional and are not in force. Provisions marked “Legal review” need professional review before release. Questions: <a href="mailto:directionary@guidedogs.org.sg">directionary@guidedogs.org.sg</a>.</p></div>
-          <div class="doc-body">
+    <div class="wrap page-head">
+      <h1>Terms of Use</h1>
+      <p class="lede">Responsible use of Directionary, a supplementary route-learning tool.</p>
+    </div>
+    <div class="wrap doc">
+      <div class="notice doc-notice"><span class="icon" aria-hidden="true">edit_note</span><div><h2>Draft, requires legal review</h2><p>These terms have not been reviewed by a legal professional and are not in force. Provisions marked “Legal review” need professional review before release. Questions: <a href="mailto:directionary@guidedogs.org.sg">directionary@guidedogs.org.sg</a>.</p></div></div>
+      <div class="prose">
           <section id="purpose" aria-labelledby="purpose-h"><h2 id="purpose-h">Purpose of Directionary</h2>
 <p>Directionary is a mobile app that helps people with visual impairments create, share and learn routes through directions, clues and landmarks contributed by the community.</p>
           </section>
@@ -110,8 +89,6 @@
           <section id="contact" aria-labelledby="contact-h"><h2 id="contact-h">Contact</h2>
 <p><a href="mailto:directionary@guidedogs.org.sg">directionary@guidedogs.org.sg</a></p>
           </section>
-          </div>
-        </div>
       </div>
     </div>
   </main>
@@ -125,12 +102,19 @@
         </p>
         <p class="muted">A community-driven route-learning and wayfinding app for people with visual impairments. Developed in collaboration with Guide Dogs Singapore.</p>
       </div>
-      <nav aria-label="Legal and support">
-        <h2>Information</h2>
+      <nav aria-label="Site">
+        <h2>Directionary</h2>
+        <ul class="flinks">
+          <li><a href="/features/">Features</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/support/">Support</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Legal">
+        <h2>Legal</h2>
         <ul class="flinks">
           <li><a href="/privacy/">Privacy Policy</a></li>
           <li><a href="/terms/">Terms of Use</a></li>
-          <li><a href="/support/">Support</a></li>
           <li><a href="/support/#account-deletion">Account deletion</a></li>
         </ul>
       </nav>

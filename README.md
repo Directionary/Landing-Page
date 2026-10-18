@@ -1,8 +1,8 @@
 # Directionary — Website
 
 Public website for [Directionary](https://github.com/Directionary), a community-driven
-wayfinding app that helps people with visual impairments discover, learn and share
-routes. Developed in collaboration with Guide Dogs Singapore.
+route-learning and wayfinding app for people with visual impairments. Developed in
+collaboration with Guide Dogs Singapore.
 
 **Live:** https://directionary.app/
 
@@ -13,12 +13,14 @@ theme toggle. There is no build step and there are no dependencies.
 
 | Path | Purpose |
 |---|---|
-| `index.html` | Home |
-| `privacy/index.html` | Privacy Policy (draft) |
-| `terms/index.html` | Terms of Use (draft) |
+| `index.html` | Home: hero, key features, how it works, approach, about |
+| `features/index.html` | Features |
+| `about/index.html` | About, collaboration, principles |
 | `support/index.html` | Support, accessibility feedback, account deletion |
-| `styles.css` | Shared styles and design tokens (light and dark). Design concept: "The Route Line", where one route runs down the page and each section is a stop on it. |
-| `assets/theme.js` | Dark mode switch (`role="switch"`); stores the choice in `localStorage` |
+| `privacy/index.html`, `terms/index.html` | Draft legal pages (footer links) |
+| `styles.css` | Shared styles and design tokens (light and dark) |
+| `assets/theme.js` | Theme toggle button (`aria-pressed`); stores the choice in `localStorage` |
+| `assets/fonts/` | Self-hosted Inter and a Material Symbols icon subset (see its README) |
 | `assets/` | Logo, header mark and favicons |
 | `CNAME` | Custom domain (`directionary.app`). Do not edit. |
 
@@ -47,6 +49,4 @@ GitHub Pages serves this repo directly (legacy build, `main` / root). Every push
   "Legal review". They need the legal operator, actual data practices, Singapore PDPA
   review and app store requirements before release.
 - Account deletion: the process on `/support/#account-deletion` is not yet confirmed.
-- Public Sans is named in the font stack but is not bundled; browsers without it fall
-  back to the system font. Self-host the font files if exact typography is required.
 - Contact: directionary@guidedogs.org.sg
