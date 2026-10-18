@@ -17,8 +17,8 @@ theme toggle. There is no build step and there are no dependencies.
 | `privacy/index.html` | Privacy Policy (draft) |
 | `terms/index.html` | Terms of Use (draft) |
 | `support/index.html` | Support, accessibility feedback, account deletion |
-| `styles.css` | Shared styles and design tokens (light and dark) |
-| `assets/theme.js` | Light/Dark segmented control; stores the choice in `localStorage` |
+| `styles.css` | Shared styles and design tokens (light and dark). Design concept: "The Route Line", where one route runs down the page and each section is a stop on it. |
+| `assets/theme.js` | Dark mode switch (`role="switch"`); stores the choice in `localStorage` |
 | `assets/` | Logo, header mark and favicons |
 | `CNAME` | Custom domain (`directionary.app`). Do not edit. |
 

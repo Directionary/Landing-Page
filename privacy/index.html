@@ -19,35 +19,35 @@
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
-    <div class="wrap">
-      <nav class="nav" aria-label="Primary">
-        <a class="brand" href="/">
-          <img class="brand-mark" src="/assets/mark-small.png" alt="" width="80" height="55" />
-          <span>Directionary</span>
-        </a>
+    <div class="wrap bar">
+      <a class="brand" href="/">
+        <img class="brand-mark" src="/assets/mark-small.png" alt="" width="80" height="55" />
+        <span>Directionary</span>
+      </a>
+      <nav aria-label="Primary" class="site-nav">
         <ul class="nav-links">
-          <li><a href="/#how-it-works">How it works</a></li>
+          <li><a href="/#why">Why it exists</a></li>
           <li><a href="/#framework">Framework</a></li>
           <li><a href="/#philosophy">Philosophy</a></li>
           <li><a href="/#about">About</a></li>
         </ul>
-        <fieldset class="theme-switch">
-          <legend class="visually-hidden">Colour theme</legend>
-          <label><input type="radio" name="theme" value="light" checked /><span>Light</span></label>
-          <label><input type="radio" name="theme" value="dark" /><span>Dark</span></label>
-        </fieldset>
       </nav>
+      <label class="switch">
+        <input type="checkbox" role="switch" id="theme-switch" />
+        <span class="track" aria-hidden="true"><span class="thumb"></span></span>
+        <span>Dark mode</span>
+      </label>
     </div>
   </header>
 
   <main id="main">
-    <div class="wrap doc">
-      <div class="doc-head">
-        <p class="eyebrow"><span class="tag">Draft</span></p>
+    <div class="wrap">
+      <div class="doc-hero">
+        <p class="kicker"><span class="tag">Draft</span></p>
         <h1>Privacy Policy</h1>
         <p class="lede">How Directionary handles personal information. This page is still being prepared.</p>
       </div>
-      <div class="grid">
+      <div class="doc-grid">
         <div class="toc">
           <nav aria-label="On this page">
             <h2>On this page</h2>
@@ -65,9 +65,9 @@
             </ol>
           </nav>
         </div>
-        <div class="prose-col">
-          <div class="draft-notice"><span class="tag">Draft, not in force</span><p>This page sets out the structure of the Privacy Policy. It does not yet describe how Directionary handles data, and nothing here should be relied on. Each section marked “To be confirmed” needs confirmed information and review before the app is released. Questions: <a href="mailto:directionary@guidedogs.org.sg">directionary@guidedogs.org.sg</a>.</p></div>
-          <div class="prose">
+        <div>
+          <div class="notice"><span class="tag">Draft, not in force</span><p>This page sets out the structure of the Privacy Policy. It does not yet describe how Directionary handles data, and nothing here should be relied on. Each section marked “To be confirmed” needs confirmed information and review before the app is released. Questions: <a href="mailto:directionary@guidedogs.org.sg">directionary@guidedogs.org.sg</a>.</p></div>
+          <div class="doc-body">
           <section id="responsible" aria-labelledby="responsible-h"><h2 id="responsible-h">Who is responsible</h2>
 <div class="pending"><span class="tag">To be confirmed</span><p>The legal operator of Directionary and the organisation responsible for personal data. Directionary is developed in collaboration with Guide Dogs Singapore; this page does not state who the legal operator is.</p></div>
           </section>
@@ -105,28 +105,26 @@
   </main>
 
   <footer class="site-footer">
-    <div class="wrap">
-      <div class="grid">
-        <div class="f-about">
-          <p class="footer-brand">
-            <img class="brand-mark" src="/assets/mark-small.png" alt="" width="80" height="55" />
-            Directionary
-          </p>
-          <p class="muted">A community-driven route-learning app for people with visual impairments. Developed in collaboration with Guide Dogs Singapore.</p>
-        </div>
-        <nav class="f-links" aria-label="Legal and support">
-          <h2>Information</h2>
-          <ul class="footer-links">
-            <li><a href="/privacy/">Privacy Policy</a></li>
-            <li><a href="/terms/">Terms of Use</a></li>
-            <li><a href="/support/">Support</a></li>
-            <li><a href="/support/#account-deletion">Account deletion</a></li>
-          </ul>
-        </nav>
-        <div class="f-contact">
-          <h2>Contact</h2>
-          <p><a href="mailto:directionary@guidedogs.org.sg">directionary@guidedogs.org.sg</a></p>
-        </div>
+    <div class="wrap fgrid">
+      <div>
+        <p class="footer-brand">
+          <img class="brand-mark" src="/assets/mark-small.png" alt="" width="80" height="55" />
+          Directionary
+        </p>
+        <p class="muted">A community-driven route-learning and wayfinding app for people with visual impairments. Developed in collaboration with Guide Dogs Singapore.</p>
+      </div>
+      <nav aria-label="Legal and support">
+        <h2>Information</h2>
+        <ul class="flinks">
+          <li><a href="/privacy/">Privacy Policy</a></li>
+          <li><a href="/terms/">Terms of Use</a></li>
+          <li><a href="/support/">Support</a></li>
+          <li><a href="/support/#account-deletion">Account deletion</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Contact</h2>
+        <p><a href="mailto:directionary@guidedogs.org.sg">directionary@guidedogs.org.sg</a></p>
       </div>
     </div>
   </footer>
