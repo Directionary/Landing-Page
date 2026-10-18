@@ -3,204 +3,242 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Directionary — Routes you can trust</title>
+  <title>Directionary — Find your way, your way</title>
   <meta
     name="description"
-    content="Directionary helps people with visual impairments record and follow routes they can trust — described by what you will hear, smell and feel, not only where to turn."
+    content="Directionary is a community-driven wayfinding app that helps people with visual impairments discover, learn and share routes through directions, clues and landmarks. Coming soon to Android and iOS."
   />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="canonical" href="https://directionary.app/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Directionary — Find your way, your way" />
+  <meta property="og:description" content="A community-driven wayfinding app for people with visual impairments. Developed in collaboration with Guide Dogs Singapore." />
+  <meta property="og:url" content="https://directionary.app/" />
+  <link rel="icon" type="image/png" href="/assets/favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <script src="/assets/theme.js"></script>
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
-    <nav class="nav" aria-label="Primary">
-      <a class="brand" href="#top" aria-label="Directionary home">
-        <span class="brand-mark" aria-hidden="true">◈</span>
-        <span class="brand-name">Directionary</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="#features">Features</a></li>
-        <li><a href="#how-it-works">How it works</a></li>
-        <li><a href="#screens">Screens</a></li>
-        <li><a href="#accessibility">Accessibility</a></li>
-      </ul>
-      <a class="button button-small" href="#get-the-app">Get the app</a>
-    </nav>
+    <div class="wrap">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="/">
+          <img class="brand-mark" src="/assets/mark-small.png" alt="" width="80" height="55" />
+          <span>Directionary</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#philosophy">Our philosophy</a></li>
+        </ul>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">
+          <span class="swatch" aria-hidden="true"></span>
+          Dark mode
+        </button>
+      </nav>
+    </div>
   </header>
 
   <main id="main">
-    <!-- Hero -->
-    <section class="hero" id="top">
-      <div class="hero-inner">
-        <div class="hero-copy">
-          <p class="eyebrow">Built for independent travel</p>
-          <h1>Routes you can trust, described the way you experience them.</h1>
-          <p class="lede">
-            Directionary helps people with visual impairments record and
-            follow routes — each step described in terms of what you will
-            <strong>hear, smell and feel</strong>, rather than only where to
-            turn.
-          </p>
-          <div class="cta-row" id="get-the-app">
-            <!-- Placeholder store badges: swap hrefs for real listings at launch. -->
-            <a class="button button-primary button-disabled" href="#" aria-disabled="true">
-              Get it on Google Play <span class="soon">(soon)</span>
-            </a>
-            <a class="button button-disabled" href="#" aria-disabled="true">
-              Download on the App Store <span class="soon">(soon)</span>
-            </a>
+    <!-- 01 Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div>
+            <p class="eyebrow">A community-driven wayfinding app</p>
+            <h1 id="hero-title">Find your way, your way.</h1>
+            <p class="lede">
+              Directionary helps people with visual impairments discover, learn
+              and share routes through directions, clues and landmarks
+              contributed by the community.
+            </p>
+            <ul class="status-list">
+              <li><span class="k">Availability</span> <span><span class="badge">Coming soon</span> to Android and iOS</span></li>
+              <li><span class="k">Developed</span> <span>in collaboration with Guide Dogs Singapore</span></li>
+            </ul>
           </div>
-          <p class="fine-print">
-            Android and iOS builds are in testing. Store links will appear here at launch.
-          </p>
-        </div>
-        <div class="hero-phone" role="img" aria-label="Illustration of the Directionary route steps screen">
-          <div class="phone">
-            <div class="phone-notch" aria-hidden="true"></div>
-            <p class="phone-title">Morning walk to the market</p>
-            <ol class="phone-steps">
-              <li><span>Turn left at the bakery smell</span></li>
-              <li><span>Follow the traffic hum uphill</span></li>
-              <li><span>Stop where the pavement cools</span></li>
-            </ol>
-            <span class="phone-cta">Start route</span>
+          <div class="hero-panel">
+            <img src="/assets/logo.png" alt="Directionary logo: three stylised book pages, two black and one yellow, above the word Directionary." width="1024" height="1024" />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Features -->
-    <section class="section" id="features">
+    <!-- 02 How it works -->
+    <section class="section" id="how-it-works" aria-labelledby="how-title">
       <div class="wrap">
-        <h2>Record once, follow with confidence</h2>
-        <p class="section-lede">
-          Every route is an ordered list of steps. Each step carries a
-          direction, a sensory clue, and a landmark — so the route still
-          makes sense when you cannot see the street.
-        </p>
-        <ul class="feature-grid">
-          <li class="card">
-            <h3>Sensory clues</h3>
+        <div class="row section-head">
+          <p class="row-label">How it works</p>
+          <div>
+            <h2 id="how-title">A little knowledge goes a long way.</h2>
+            <p class="lede">Every journey begins with understanding where you’re going.</p>
             <p>
-              Attach what you will hear, smell or feel to every step —
-              traffic noise, a bakery, a change in temperature. That is
-              what makes a route followable without sight.
+              Directionary makes it easier to access and share the route
+              knowledge that helps people familiarise themselves with their
+              surroundings.
             </p>
-          </li>
-          <li class="card">
-            <h3>Landmarks that anchor you</h3>
-            <p>
-              Point each step at a physical feature near you, picked from
-              nearby places or typed in. No coordinates, no guesswork at
-              the kerb.
-            </p>
-          </li>
-          <li class="card">
-            <h3>A library of trusted routes</h3>
-            <p>
-              Save your own routes and browse routes shared by others.
-              Copy a community route and adapt it instead of starting
-              from scratch.
-            </p>
-          </li>
-          <li class="card">
-            <h3>Step-by-step walkthrough</h3>
-            <p>
-              Follow one clear instruction at a time while you walk,
-              with announcements built for screen readers.
-            </p>
-          </li>
-          <li class="card">
-            <h3>Voice input</h3>
-            <p>
-              Dictate directions, clues and landmarks instead of typing
-              them — authoring works the way talking does.
-            </p>
-          </li>
-          <li class="card">
-            <h3>Private by default</h3>
-            <p>
-              Sign in with an email link, unlock with biometrics, and
-              keep your tokens in secure on-device storage.
-            </p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- How it works -->
-    <section class="section section-alt" id="how-it-works">
-      <div class="wrap">
-        <h2>How it works</h2>
-        <ol class="steps">
+          </div>
+        </div>
+        <ol class="numbered">
           <li>
-            <span class="step-number" aria-hidden="true">1</span>
-            <h3>Record a route</h3>
-            <p>Name an origin and a destination, then add one step at a time: direction, clue, landmark.</p>
+            <span class="num">01</span>
+            <h3>Discover</h3>
+            <p>Explore routes shared by the community and find journeys relevant to you.</p>
           </li>
           <li>
-            <span class="step-number" aria-hidden="true">2</span>
-            <h3>Save it</h3>
-            <p>A route with no steps has nothing to follow, so nothing saves until the steps are in.</p>
+            <span class="num">02</span>
+            <h3>Learn</h3>
+            <p>Understand directions, clues and landmarks to build familiarity with a route before travelling.</p>
           </li>
           <li>
-            <span class="step-number" aria-hidden="true">3</span>
-            <h3>Walk it</h3>
-            <p>Open the route, follow each step in order, and trust what you hear, smell and feel.</p>
+            <span class="num">03</span>
+            <h3>Contribute</h3>
+            <p>Share your knowledge by creating routes that others can discover and learn from.</p>
           </li>
         </ol>
       </div>
     </section>
 
-    <!-- Screens -->
-    <section class="section" id="screens">
+    <!-- 03 Philosophy -->
+    <section class="section surface-band" id="philosophy" aria-labelledby="philosophy-title">
       <div class="wrap">
-        <h2>Screens</h2>
-        <p class="section-lede">
-          Real screenshots are coming. These placeholders hold the layout
-          until the first release build is filmed.
-        </p>
-        <ul class="screen-grid">
-          <li class="screen-placeholder">
-            <span class="screen-label">Home</span>
-            <span class="screen-note">Nearby routes at a glance</span>
+        <div class="row section-head">
+          <p class="row-label">Our philosophy</p>
+          <div>
+            <h2 id="philosophy-title">Designed with purpose.</h2>
+            <p class="lede">
+              Directionary is guided by three principles that shape how we
+              approach accessibility, clarity and independence.
+            </p>
+          </div>
+        </div>
+        <ol class="numbered principles">
+          <li>
+            <span class="num">01</span>
+            <h3>Ear First, Eyes Second</h3>
+            <div class="quote">
+              <p>We prioritise experiences that can be understood beyond what is seen.</p>
+              <p>By designing for screen readers first, we aim to make information and interactions clear, meaningful and accessible.</p>
+            </div>
           </li>
-          <li class="screen-placeholder">
-            <span class="screen-label">Create route</span>
-            <span class="screen-note">Direction · clue · landmark</span>
+          <li>
+            <span class="num">02</span>
+            <h3>Less but Clear</h3>
+            <div class="quote">
+              <p>Simplicity should never come at the expense of clarity.</p>
+              <p>We remove unnecessary complexity while ensuring people have the information they need to understand each interaction.</p>
+            </div>
           </li>
-          <li class="screen-placeholder">
-            <span class="screen-label">Walkthrough</span>
-            <span class="screen-note">One step at a time</span>
+          <li>
+            <span class="num">03</span>
+            <h3>Empower, Not Replace</h3>
+            <div class="quote">
+              <p>Directionary complements orientation and mobility training rather than replacing it.</p>
+              <p>Our goal is to make shared route knowledge more accessible, encouraging exploration, familiarity and independence.</p>
+            </div>
           </li>
-        </ul>
+        </ol>
       </div>
     </section>
 
-    <!-- Accessibility -->
-    <section class="section section-alt" id="accessibility">
-      <div class="wrap narrow">
-        <h2>Accessibility is the product</h2>
-        <p>
-          Directionary is designed with screen readers first: every screen
-          carries semantic labels, walkthrough steps are announced as you
-          go, and text is written to be heard — not just read. If anything
-          in the app blocks your travel, the in-app report form reaches the
-          team directly.
-        </p>
+    <!-- 04 Mission -->
+    <section class="section" id="mission" aria-labelledby="mission-title">
+      <div class="wrap">
+        <div class="row">
+          <p class="row-label">Our mission</p>
+          <div>
+            <h2 id="mission-title" style="margin-bottom: var(--s-4)">Knowledge shared. Confidence built.</h2>
+            <p class="statement">
+              Learning a new route often involves understanding directions,
+              recognising landmarks and remembering the details that make a
+              journey familiar.
+            </p>
+            <p>Directionary was created to make this knowledge easier to access and share.</p>
+            <p>
+              By bringing community-contributed route information together, we
+              hope to support people with visual impairments as they explore and
+              familiarise themselves with new environments.
+            </p>
+            <p>We believe technology should complement existing skills, not replace them.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 About -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap">
+        <div class="row">
+          <p class="row-label">About Directionary</p>
+          <div>
+            <h2 id="about-title" style="margin-bottom: var(--s-4)">A different approach to wayfinding.</h2>
+            <p>
+              Directionary began as a design initiative exploring how route
+              knowledge could be made more accessible to people with visual
+              impairments.
+            </p>
+            <p>
+              The project focuses on supporting route learning through
+              community-contributed directions, clues and landmarks.
+            </p>
+            <p>Directionary is developed in collaboration with Guide Dogs Singapore.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 Responsible wayfinding -->
+    <section class="section surface-band" id="responsible-wayfinding" aria-labelledby="responsible-title">
+      <div class="wrap">
+        <div class="row">
+          <p class="row-label">Responsible wayfinding</p>
+          <div class="notice">
+            <h2 id="responsible-title" style="margin-bottom: var(--s-3)">A guide, not a replacement.</h2>
+            <p>Directionary is a supplementary route-learning and wayfinding tool.</p>
+            <p>
+              Routes may contain community-contributed information that becomes
+              outdated or does not reflect current environmental conditions.
+              Directionary does not provide real-time obstacle detection or
+              guarantee route accuracy or safety.
+            </p>
+            <p>
+              Users should continue to exercise personal judgement, remain aware
+              of their surroundings and use appropriate mobility skills and aids.
+            </p>
+            <a class="button" href="/terms/">Read the Terms of Use</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <p><strong>Directionary</strong> — routes you can trust.</p>
-      <ul class="footer-links">
-        <li><a href="https://github.com/Directionary">GitHub</a></li>
-        <li><a href="mailto:directionary@guidedogs.org.sg">Contact</a></li>
-      </ul>
-      <p class="fine-print">© 2026 Directionary. All rights reserved.</p>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand">
+            <img class="brand-mark" src="/assets/mark-small.png" alt="" width="80" height="55" />
+            Directionary
+          </p>
+          <p>A community-driven wayfinding app to help people with visual impairments discover, learn and share routes.</p>
+          <p>Developed in collaboration with Guide Dogs Singapore.</p>
+        </div>
+        <nav aria-label="Legal and support">
+          <h2>Information</h2>
+          <ul class="footer-links">
+            <li><a href="/privacy/">Privacy Policy</a></li>
+            <li><a href="/terms/">Terms of Use</a></li>
+            <li><a href="/support/">Support</a></li>
+            <li><a href="/support/#account-deletion">Account deletion</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2>Contact</h2>
+          <p><a href="mailto:directionary@guidedogs.org.sg">directionary@guidedogs.org.sg</a></p>
+        </div>
+      </div>
     </div>
   </footer>
 </body>
