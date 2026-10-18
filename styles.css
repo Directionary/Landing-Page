@@ -128,12 +128,14 @@ a:hover { text-decoration-color: var(--text); }
 
 .brand-mark {
   display: block;
-  width: 2.25rem;
+  width: 2.5rem;
   height: auto;
-  padding: 0.3rem 0.35rem;
-  border-radius: 8px;
-  background: var(--plate);
-  box-sizing: content-box;
+}
+
+/* The mark's black pages vanish on the dark surface; trace them in cream. */
+:root[data-theme="dark"] .brand-mark {
+  filter: drop-shadow(1px 0 0 var(--text)) drop-shadow(-1px 0 0 var(--text))
+    drop-shadow(0 1px 0 var(--text)) drop-shadow(0 -1px 0 var(--text));
 }
 
 .nav-links {
