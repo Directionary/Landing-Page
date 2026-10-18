@@ -228,9 +228,13 @@ p:last-child { margin-bottom: 0; }
 @media (min-width: 56rem) { .split { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); } }
 
 .terms-list { margin: 0; }
-.terms-list > div { display: grid; gap: 0.125rem 1.5rem; padding-block: 0.875rem; border-top: 1px solid var(--border); }
-@media (min-width: 40rem) { .terms-list > div { grid-template-columns: 8rem minmax(0, 1fr); } }
-.terms-list > div:last-child { border-bottom: 1px solid var(--border); }
+/* Label / description rows (Our approach, framework, acknowledgements):
+   no rule above the first row or below the last; hairlines only between rows. */
+.terms-list > div, .people > div { display: grid; gap: 0.125rem 1.5rem; padding-block: 1rem; }
+.terms-list > div:first-child, .people > div:first-child { padding-top: 0; }
+.terms-list > div:last-child, .people > div:last-child { padding-bottom: 0; }
+.terms-list > div + div, .people > div + div { border-top: 1px solid var(--border); }
+@media (min-width: 40rem) { .terms-list > div, .people > div { grid-template-columns: 10rem minmax(0, 1fr); } }
 .terms-list dt { font-weight: 600; }
 .terms-list dd { margin: 0; color: var(--muted); }
 .terms-list .q { color: var(--text); font-weight: 500; }
@@ -240,7 +244,7 @@ p:last-child { margin-bottom: 0; }
 }
 .inline-link:hover { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 0.25em; }
 .inline-link .icon { width: 1.125rem; height: 1.125rem; }
-.small-note { margin-top: 1rem; font-size: 0.9375rem; color: var(--muted); }
+.small-note { margin-top: 1.5rem; font-size: 0.9375rem; color: var(--muted); }
 
 /* ---------- Inner pages ---------- */
 .page-head { padding-block: clamp(2rem, 5vw, 3.5rem) var(--section); }
@@ -284,9 +288,7 @@ p:last-child { margin-bottom: 0; }
 .info-card { max-width: 48rem; padding: 1.5rem 1.75rem; border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--bg-alt); }
 .info-card p { color: var(--text-2); font-size: 0.96875rem; }
 
-.terms-list--plain > div { padding-block: 0.875rem; border-top: 0; border-bottom: 0; }
-.terms-list--plain > div:first-child { padding-top: 0; }
-.terms-list--plain > div:last-child { border-bottom: 0; }
+.terms-list--plain > div + div { border-top: 0; }
 .terms-list--plain dd { color: var(--text-2); }
 
 /* Design principles: three balanced columns */
@@ -299,9 +301,6 @@ p:last-child { margin-bottom: 0; }
 
 /* Acknowledgements */
 .people { margin: 0; }
-.people > div { display: grid; gap: 0.125rem var(--sp-4); padding-block: 1.125rem; border-top: 1px solid var(--border); }
-.people > div:last-child { border-bottom: 1px solid var(--border); }
-@media (min-width: 40rem) { .people > div { grid-template-columns: 12rem minmax(0, 1fr); } }
 .people dt { font-weight: 600; }
 .people dd { margin: 0; color: var(--text-2); }
 .closing-note { margin-top: var(--sp-3); color: var(--muted); font-size: 0.9375rem; }
