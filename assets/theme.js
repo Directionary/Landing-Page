@@ -1,6 +1,7 @@
 /* Theme switching. Loaded synchronously in <head> so the stored theme is applied
-   before first paint. Light is the default. The toggle is a button whose name
-   stays "Dark mode" and whose state is exposed with aria-pressed. */
+   before first paint. Light is the default. The toggle is a button whose accessible
+   name describes the action it will perform ("Switch to dark mode" / "Switch to
+   light mode"). */
 (function () {
   var KEY = "directionary-theme";
   var root = document.documentElement;
@@ -21,7 +22,8 @@
     if (!button) return;
 
     function sync() {
-      button.setAttribute("aria-pressed", root.getAttribute("data-theme") === "dark" ? "true" : "false");
+      var dark = root.getAttribute("data-theme") === "dark";
+      button.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
     }
     sync();
 

@@ -7,14 +7,7 @@
   font-style: normal;
   font-weight: 400 700;
   font-display: swap;
-  src: url("/assets/fonts/inter-latin.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Material Symbols Outlined";
-  font-style: normal;
-  font-weight: 400;
-  font-display: block;
-  src: url("/assets/fonts/material-symbols.woff2") format("woff2");
+  src: url("assets/fonts/inter-latin.woff2") format("woff2");
 }
 
 :root {
@@ -95,15 +88,8 @@ a:hover { text-decoration-color: var(--text); }
 
 .wrap { width: 100%; max-width: calc(var(--max) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
 
-/* ---------- Icons (Material Symbols, ligature-based, decorative) ---------- */
-.icon {
-  display: inline-block; flex: none;
-  width: 1.5rem; height: 1.5rem; overflow: hidden;
-  font-family: "Material Symbols Outlined"; font-weight: 400; font-style: normal;
-  font-size: 1.5rem; line-height: 1; letter-spacing: normal; text-transform: none; white-space: nowrap;
-  font-feature-settings: "liga"; -webkit-font-feature-settings: "liga";
-  user-select: none;
-}
+/* ---------- Icons (inline Material Symbols SVG, decorative) ---------- */
+.icon { display: block; flex: none; width: 1.25rem; height: 1.25rem; fill: currentColor; }
 
 /* ---------- Type ---------- */
 h1, h2, h3 { margin: 0; text-wrap: balance; }
@@ -151,15 +137,15 @@ p:last-child { margin-bottom: 0; }
   margin-left: auto;
   display: inline-grid; place-items: center; width: 2.25rem; height: 2.25rem; padding: 0;
   border: 1px solid var(--border-strong); border-radius: var(--r-sm);
-  background: transparent; color: var(--text); cursor: pointer;
+  background: transparent; color: var(--text); cursor: pointer; font: inherit;
   box-shadow: 0 1px 2px rgb(0 0 0 / 0.05);
 }
 @media (min-width: 40rem) { .theme-toggle { margin-left: 0.5rem; } }
 .theme-toggle:hover { background: var(--bg-alt); }
-.theme-toggle .icon { grid-area: 1 / 1; width: 1.25rem; height: 1.25rem; font-size: 1.25rem; }
+.theme-toggle .icon { grid-area: 1 / 1; }
 .theme-toggle .moon { display: none; }
 :root[data-theme="dark"] .theme-toggle .sun { display: none; }
-:root[data-theme="dark"] .theme-toggle .moon { display: inline-block; }
+:root[data-theme="dark"] .theme-toggle .moon { display: block; }
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -171,7 +157,7 @@ p:last-child { margin-bottom: 0; }
 .btn:hover { opacity: 0.9; }
 .btn-ghost { background: transparent; color: var(--text); border-color: var(--border-strong); }
 .btn-ghost:hover { background: var(--bg-alt); opacity: 1; }
-.btn .icon { width: 1.125rem; height: 1.125rem; font-size: 1.125rem; }
+.btn .icon { width: 1.125rem; height: 1.125rem; }
 .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem; }
 
 /* ---------- Layout ---------- */
@@ -233,7 +219,7 @@ p:last-child { margin-bottom: 0; }
 .terms-list dd { margin: 0; color: var(--muted); }
 
 .inline-link { display: inline-flex; align-items: center; gap: 0.25rem; margin-top: 1rem; font-weight: 500; }
-.inline-link .icon { width: 1.125rem; height: 1.125rem; font-size: 1.125rem; }
+.inline-link .icon { width: 1.125rem; height: 1.125rem; }
 .small-note { margin-top: 1rem; font-size: 0.9375rem; color: var(--muted); }
 
 /* ---------- Inner pages ---------- */
