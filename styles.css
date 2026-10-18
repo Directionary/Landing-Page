@@ -132,12 +132,6 @@ a:hover { text-decoration-color: var(--text); }
   height: auto;
 }
 
-/* The mark's black pages vanish on the dark surface; trace them in cream. */
-:root[data-theme="dark"] .brand-mark {
-  filter: drop-shadow(1px 0 0 var(--text)) drop-shadow(-1px 0 0 var(--text))
-    drop-shadow(0 1px 0 var(--text)) drop-shadow(0 -1px 0 var(--text));
-}
-
 .nav-links {
   display: flex;
   flex-wrap: wrap;
