@@ -1,18 +1,31 @@
-# Directionary — Landing Page
+# Directionary — Website
 
-Public landing site for the [Directionary](https://github.com/Directionary) app.
+Public website for [Directionary](https://github.com/Directionary), a community-driven
+route-learning and wayfinding app for people with visual impairments. Developed in
+collaboration with Guide Dogs Singapore.
 
-**Live:** https://directionary.github.io/Landing-Page/
+**Live:** https://directionary.app/
 
 ## What this is
 
-A single static page (plain HTML + CSS, no build step) introducing Directionary —
-an app that helps people with visual impairments record and follow routes they
-can trust, described by what they will hear, smell and feel rather than only
-where to turn.
+A static site: plain HTML and CSS with one small JavaScript file for the light/dark
+theme toggle. There is no build step and there are no dependencies.
 
-- `index.html` — page content
-- `styles.css` — dark theme matching the app (gold `#f9cb42` on `#060605`)
+| Path | Purpose |
+|---|---|
+| `index.html` | Home: hero, key features, how it works, approach, about |
+| `features/index.html` | Features |
+| `about/index.html` | About, collaboration, principles |
+| `support/index.html` | Support, accessibility feedback, account deletion |
+| `privacy/index.html`, `terms/index.html` | Draft legal pages (footer links) |
+| `styles.css` | Shared styles and design tokens (light and dark) |
+| `assets/theme.js` | Theme toggle + `prefers-color-scheme` auto-detect (stored choice wins, else system; follows system live); stores the choice in `localStorage` |
+| `assets/fonts/` | Self-hosted Inter and a Material Symbols icon subset (see its README) |
+| `assets/` | Logo, header mark and favicons |
+| `CNAME` | Custom domain (`directionary.app`). Do not edit. |
+
+Links and assets use root-relative paths (`/styles.css`), which work on the custom
+domain and with the local preview below.
 
 ## Preview locally
 
@@ -20,15 +33,24 @@ where to turn.
 python3 -m http.server 20000
 ```
 
-then open http://localhost:20000/.
+then open http://localhost:20000/. Serve from the repository root so root-relative
+paths resolve.
 
 ## Deploy
 
-GitHub Pages serves this repo directly (legacy build, `main` / root). Every push
-to `main` redeploys automatically — no action needed.
+GitHub Pages serves this repo directly (legacy build, `main` / root). Every push to
+`main` redeploys automatically. Work on a feature branch and merge through a pull request.
 
-## Placeholders to resolve before launch
+## Launch requirements
 
-- Store buttons are disabled with "(soon)" — swap in real Play / App Store URLs.
-- `Screens` section holds dashed placeholders until real screenshots are filmed.
+- Store buttons: none yet. The hero shows "Coming soon" until verified Google Play and
+  App Store links exist.
+- Privacy Policy and Terms of Use are drafts with sections marked "To be confirmed" /
+  "Legal review". They need the legal operator, actual data practices, Singapore PDPA
+  review and app store requirements before release.
+- Account deletion: the process on `/support/#account-deletion` is not yet confirmed.
+- About page acknowledgements: names, roles and affiliations are provisional. Confirm each
+  with the person, and obtain permission to publish, before launch. To link a name to
+  LinkedIn later, wrap it as shown in the comment above the `.people` list in `about/index.html`
+  (only when a real URL exists).
 - Contact: directionary@guidedogs.org.sg
