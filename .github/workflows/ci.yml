@@ -25,3 +25,12 @@ jobs:
 
       - name: Validate site
         run: python3 scripts/validate.py .
+
+  lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Lint HTML
+        run: npx --yes htmlhint@1.9.2 "**/*.html"
