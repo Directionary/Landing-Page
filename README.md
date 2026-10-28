@@ -36,6 +36,19 @@ python3 -m http.server 20000
 then open http://localhost:20000/. Serve from the repository root so root-relative
 paths resolve.
 
+## Checks
+
+```bash
+node --check assets/theme.js
+python3 scripts/validate.py .
+```
+
+`scripts/validate.py` needs only the Python standard library. It verifies required
+files, the `CNAME` hostname, per-page `lang` / `title` / `viewport` /
+`theme-color` / `theme.js`, and that every internal link and asset resolves
+(including `#fragment` ids). CI (`.github/workflows/ci.yml`) runs the same two
+commands on pushes and pull requests to `main`.
+
 ## Deploy
 
 GitHub Pages serves this repo directly (legacy build, `main` / root). Every push to
