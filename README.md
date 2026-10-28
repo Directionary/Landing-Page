@@ -19,7 +19,7 @@ theme toggle. There is no build step and there are no dependencies.
 | `support/index.html` | Support, accessibility feedback, account deletion |
 | `privacy/index.html`, `terms/index.html` | Draft legal pages (footer links) |
 | `styles.css` | Shared styles and design tokens (light and dark) |
-| `assets/theme.js` | Theme toggle button (`aria-pressed`); stores the choice in `localStorage` |
+| `assets/theme.js` | Theme toggle + `prefers-color-scheme` auto-detect (stored choice wins, else system; follows system live); stores the choice in `localStorage` |
 | `assets/fonts/` | Self-hosted Inter and a Material Symbols icon subset (see its README) |
 | `assets/` | Logo, header mark and favicons |
 | `CNAME` | Custom domain (`directionary.app`). Do not edit. |
