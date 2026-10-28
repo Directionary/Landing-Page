@@ -1,0 +1,5 @@
+# Temporary: exclude the Play policy URL until it is deployed.
+# lychee checks PR commits against the live site, so the new page's own
+# canonical/og:url 404s before merge. After merge + Pages deploy, remove
+# this file (or this entry) so the URL is checked normally.
+exclude = ["https://directionary.app/privacy/play-store.html"]
