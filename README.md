@@ -36,6 +36,26 @@ python3 -m http.server 20000
 then open http://localhost:20000/. Serve from the repository root so root-relative
 paths resolve.
 
+## Checks
+
+```bash
+node --check assets/theme.js
+python3 scripts/validate.py .
+npx --yes htmlhint@1.9.2 "**/*.html"
+```
+
+`scripts/validate.py` needs only the Python standard library. It verifies required
+files, the `CNAME` hostname, per-page `lang` / `title` / `viewport` /
+`theme-color` / `theme.js`, and that every internal link and asset resolves
+(including `#fragment` ids). `.htmlhintrc` holds the HTML lint rules.
+
+CI (`.github/workflows/ci.yml`) runs validate + HTML lint on pushes and pull
+requests to `main`. Heavier scans live in `.github/workflows/scan.yml`: gitleaks
+secret scan (pinned in `GITLEAKS_VERSION`) and lychee link check (pinned in
+`LYCHEE_VERSION`), on push/PR plus weekly. All workflows are shell-steps only so
+they run under `act` locally; `.actrc` pins the `ubuntu-latest` image to
+`catthehacker/ubuntu:act-24.04` to match GitHub (lychee needs its newer glibc).
+
 ## Deploy
 
 GitHub Pages serves this repo directly (legacy build, `main` / root). Every push to
